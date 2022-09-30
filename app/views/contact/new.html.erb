@@ -1,0 +1,41 @@
+<div class="container">
+   <div class="card mt-5">
+        <div class="card-header">	
+           <h3 class="text text-secondary">	Formulario de Contacto</h3>
+        </div>	
+        <div class="card-body">
+			<%= form_for @contacto, url:{action: :create} do |data| %>
+            <div class="container alert alert-primary">
+	   		    <div class="form-group row">	
+					<label class="col-3">Nombre: </label>
+					<div class="col-5"> 
+						<%= data.text_field :name, class:'form-control' %>	
+					</div>	       
+			    </div>	
+    		    <div class="row"><br></div>
+			    <div class="form-group row">	
+					<label class="col-3">Correo: </label>
+					<div class="col-5"> 
+            			<%= data.text_field :email, class:'form-control'%>
+        			</div> 
+			    </div>
+			     <div class="row"><br></div>
+			    <div class="form-group row">	
+					<label class="col-3">Comentarios: </label>
+					<div class="col-5"> 
+    					<%= data.text_area :comment, class:'form-control' %>
+    				</div>
+			    </div>
+			     <div class="row"><br></div>
+				<button type="submit" name="button" class='btn btn-primary btn-lg'>
+				<span>Enviar</span>
+				</button>
+				<% end %>
+		   </div>
+	 	</div>
+    </div>
+</div>	
+
+
+
+
